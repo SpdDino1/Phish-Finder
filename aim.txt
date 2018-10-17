@@ -1,0 +1,47 @@
+Aim
+
+>Zones of searching = Url, Network [PageRank, WHOIS, APIs etc], Page Content
+
+>The Fadi papers and others read earlier focus on searching all the zones of a give a page. This makes the model complex, large and longer to train. Further predictions take more time as model is complex. Random forest was the preferred model due to large number of features. Model usually relied on a lot of servers (APIs and other 'Network' zone resources)
+
+>After 2015 a new type of prediction strategy only involving URL and Network came in. This simplified the model, decreased it's size and complexity and also gave faster predictions. SVMs well suited the job (And 'online perceptron' classification technique)
+
+>A new trend of research is now trying to only use only the URL too is coming up. If this succeeds, the phishing detection software would be completely independent of external services and servers and can fully reside on the client side, thus offering a truly real time service. SVMs well suited the job (And 'online perceptron' classification technique)
+
+Hence we try to find if only the URL is enough, or if Network zone searches are required.
+
+Papers
+
+URL+Network
+https://arxiv.org/pdf/1009.2275.pdf
+
+URL
+https://hcis-journal.springeropen.com/articles/10.1186/s13673-017-0098-1
+
+Dataset
+
+'Additional Files' section of hcis-journal has a data set with pure URL metrics
+
+The below dataset has some url metrics but has WHOIS domain registration date attribute 
+https://archive.ics.uci.edu/ml/datasets/phishing+websites 
+
+Feature Set
+
+>>URL Based
+URL Length
+
+[Subdomain Indirect Count]
+No. of .
+No. of /
+
+[Phishing Domain Name]
+No. of _
+No. of Numbers
+No. of - 
+
+[GET request Params]
+No. of &
+No. of =
+
+>>Network Related
+WHOIS registration date
