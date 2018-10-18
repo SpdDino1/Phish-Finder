@@ -2,9 +2,9 @@ import csv,random;
 
 #fiel openings
 try:
-	sourceSet = open("./shuffledDataset.csv","r");
+	sourceSet = open("./csvFiles/shuffledDataset.csv","r");
 except:
-	sourceSet = open("./unshuffledDataset.csv","r");
+	sourceSet = open("./csvFiles/updatedDatasetSlashed.csv","r");
 
 allRows=csv.reader(sourceSet);
 
@@ -25,7 +25,7 @@ for i in range(0,1000):
 	dataList[a],dataList[b]=dataList[b],dataList[a];
 
 #write to file
-shuffledSet = open("./shuffledDataset.csv","w");
+shuffledSet = open("./csvFiles/shuffledDataset.csv","w");
 shuffledSetWriter=csv.writer(shuffledSet);
 shuffledSetWriter.writerow(csvTags);
 

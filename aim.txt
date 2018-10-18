@@ -28,20 +28,20 @@ https://archive.ics.uci.edu/ml/datasets/phishing+websites
 Feature Set
 
 >>URL Based
+TLD Features
+
 URL Length
 
 [Subdomain Indirect Count]
 No. of .
-No. of /
 
 [Phishing Domain Name]
 No. of _
 No. of Numbers
 No. of - 
 
-[GET request Params]
+Path Features
 No. of &
 No. of =
-
->>Network Related
-WHOIS registration date
+No. of Numbers
+No. of /
