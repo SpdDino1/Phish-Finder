@@ -7,31 +7,16 @@ def countDigits(stringInput):
 
 	return count;
 
-import pandas as pd
-from sklearn import svm
+import pandas as pd;
 from urlparse import urlparse;
+from sklearn.externals import joblib;
 
-#dataset
-data=pd.read_csv("./datasets/csvFiles/shuffledDataset.csv");
+#Load Model
+model=joblib.load("./modelDump.pkl");
 
-#Model creation + Training
-model=svm.SVC(kernel="linear",C=1);
-#model=svm.SVC(gamma="scale");
-model.fit(data[[
-	"length",
-	"dotCount",
-	"underscoreCount",
-	"numberCountInTld",
-	"hyphenCount",
-	"ampersandCount",
-	"equalCount",
-	"slashCount",
-	"numberCountInPath"
-	]],
-	data["status"]);
-
-#Model Prediction
-print "Model Trained!";
+#Warnings <-----> Output 
+for i in range(0,5):
+	print
 
 while(True):
 	inVector=[];
